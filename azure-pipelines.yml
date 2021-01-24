@@ -15,7 +15,7 @@ variables:
 steps:
 - task: CmdLine@2
   inputs:
-    script: 'cd todoBack' 
+    script: 'cd /todoBack' 
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
 - task: UseDotNet@2
