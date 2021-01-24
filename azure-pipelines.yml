@@ -13,8 +13,11 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- task: CmdLine@2
+  inputs:
+    script: 'cd todoBack' 
+    #workingDirectory: # Optional
+    #failOnStderr: false # Optional
 - task: UseDotNet@2
-- script: # script path or inline
-  workingDirectory: todoBack
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
