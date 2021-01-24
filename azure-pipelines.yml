@@ -16,7 +16,7 @@ steps:
 - task: Bash@3
   inputs:
     targetType: 'inline'
-    script: 'cd G:\Projects\Angular\AngularPro\TodoApp\todoBack'
+    script: 'cd .\todoBack\
   env:
     MYSECRET: $(Foo)
 
