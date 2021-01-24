@@ -13,11 +13,7 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: CmdLine@2
-  inputs:
-    script: 'cd G:\Projects\Angular\AngularPro\TodoApp\todoBack' 
-    #workingDirectory: # Optional
-    #failOnStderr: false # Optional
+- powershell: 'cd G:\Projects\Angular\AngularPro\TodoApp\todoBack'
 - task: UseDotNet@2
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
